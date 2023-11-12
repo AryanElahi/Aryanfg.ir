@@ -253,3 +253,62 @@
   new PureCounter();
 
 })()
+
+//Change btn 
+const ChangeLanBtn = document.querySelector(".translateBtn")
+const ChangeLan = document.querySelector(".lan-ul")
+const engBtn = document.querySelector("#eng-lan")
+const engSvg = document.querySelector("#eng-svg")
+
+
+let countLanguage=0;
+let stepLan = 0;
+
+ChangeLanBtn.addEventListener('click' , ()=>BtnHandler())
+
+
+  engBtn.style.color="white"
+  engSvg.style.fill="#149ddd"
+
+
+
+const BtnHandler=() =>{
+  countLanguage++;
+
+  if(countLanguage%2==0){
+    ChangeLan.style.display="none"
+  }else if(countLanguage%2==1){
+    ChangeLan.style.display="block"
+  }
+}
+
+//Resume btn
+
+const resumeBtn = document.querySelector(".resume-btn")
+const resumeUl = document.querySelector(".res-ul")
+
+resumeBtn.addEventListener("click" , ()=>resumeHandler())
+
+let resumeCount =0;
+
+const resumeHandler=()=>{
+  resumeCount++;
+  if(resumeCount%2==0){
+    resumeUl.style.display="none"
+    } else if(resumeCount%2==1){
+      resumeUl.style.display="block";
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

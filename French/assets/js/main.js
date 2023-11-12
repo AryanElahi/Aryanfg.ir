@@ -253,3 +253,47 @@
   new PureCounter();
 
 })()
+
+
+//Change btn 
+const ChangeLanBtn = document.querySelector(".translateBtn")
+const ChangeLan = document.querySelector(".lan-ul")
+const freBtn = document.querySelector("#fre-lan")
+const freSvg = document.querySelector("#fre-lan-svg")
+
+let count=0;
+let stepLan = 2;
+
+  freBtn.style.color="white"
+  freSvg.style.color="#149ddd"
+
+ChangeLanBtn.addEventListener('click' , ()=>BtnHandler())
+
+const BtnHandler=() =>{
+  count++;
+
+  if(count%2==0){
+    ChangeLan.style.display="none"
+  }else if(count%2==1){
+    ChangeLan.style.display="block"
+  }
+}
+
+
+//Resume btn
+
+const resumeBtn = document.querySelector(".resume-btn")
+const resumeUl = document.querySelector(".res-ul")
+
+resumeBtn.addEventListener("click" , ()=>resumeHandler())
+
+let resumeCount =0;
+
+const resumeHandler=()=>{
+  resumeCount++;
+  if(resumeCount%2==0){
+    resumeUl.style.display="none"
+    } else if(resumeCount%2==1){
+      resumeUl.style.display="block";
+    }
+}
